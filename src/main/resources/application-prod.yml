@@ -1,0 +1,5 @@
+spring:
+  banner:
+    location: classpath:static/banner-prod.txt
+custom:
+  message: Hello, clients!

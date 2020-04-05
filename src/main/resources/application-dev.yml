@@ -1,0 +1,5 @@
+spring:
+  banner:
+    location: classpath:static/banner-dev.txt
+custom:
+  message: Hello, developers!

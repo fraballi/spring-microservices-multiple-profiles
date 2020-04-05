@@ -1,0 +1,25 @@
+version: "3"
+networks:
+  micsrv-net:
+    driver: bridge
+services:
+  micsrv-prod:
+    container_name: micsrv-prod
+    build: .
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SERVER_PORT=18080
+    networks:
+      - micsrv-net
+    ports:
+      - "18080:18080"
+  micsrv-dev:
+    container_name: micsrv-dev
+    build: .
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - SERVER_PORT=18081
+    networks:
+      - micsrv-net
+    ports:
+      - "18081:18081"
